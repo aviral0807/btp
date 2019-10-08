@@ -1,8 +1,6 @@
 #!/bin/bash
 
-cd virtualenv/bin/
-source activate
-cd ../../
+virtualenv -p python3 .env && source .env/bin/activate && pip3 install -r requirements.txt
 
 cp input.txt temp.txt
 
@@ -16,5 +14,3 @@ python3 -W ignore draw_graph.py
 else
 echo "Infesiable Quotient Matrix"
 fi
-
-deactivate
